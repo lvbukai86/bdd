@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰墩墩</title>
+</head>
+
+<body>
+<div class="out">
+ <div class="body">
+     <div class="face">
+     <div class="ear ear-left"></div>
+     <div class="ear ear-right"></div>
+     </div>
+     <div class="eye eye-left">
+         <div class="eye-circle">
+             <div class="eye-center  eye-center-left"></div>
+         </div>
+     </div>
+     <div class="eye eye-right">
+         <div class="eye-circle">
+             <div class="eye-center  eye-center-right"></div>
+         </div>
+     </div>
+     <div class="nose"></div>
+     <div class="mouthtap"></div>
+     <div class="mouth">
+         <div class="tongue"></div>
+     </div>
+     <div class="hand hand-left"></div>
+     <div class="hand hand-right">
+     </div>
+     <div class="foot foot-left"></div>
+     <div class="foot foot-right"></div>
+
+     <img src="/logo.cecc779a.png" width="40px">
+
+ </div>
+</div>
+</body>
+</html>
+<style lang="scss">*{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .out{
+        width: 306px;
+        height: 348px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        position: relative;
+    }
+    .body{
+        width: 306px;
+        height: 348px;
+        border: 6px black solid;
+        border-top-left-radius:300px;
+        border-top-right-radius:300px;
+        border-bottom-left-radius:300px;
+        border-bottom-right-radius:300px;
+        background: white;
+        text-align: center;
+    }
+    @keyframes mymove
+    {
+       33% {height:60px;}
+       66% {height:100px;}
+        99% {height:60px;}
+    }
+    .ear{
+        position: absolute;
+        border: 6px #373737 solid;
+        background: black;
+        width: 80px;
+        height:80px;
+        border-top-left-radius:80px;
+        border-top-right-radius:80px;
+        z-index: -1;
+        transform: rotate(-30deg);
+
+
+    }
+    .ear-left{
+        left: 0;
+        top: 0;
+        transform: rotate(-30deg);
+        animation:mymove 3s infinite linear ;
+        animation-direction: alternate;
+        -webkit-animation:mymove 3s infinite linear alternate; /* Safari 和 Chrome */
+    }
+    .ear-right{
+        right: 0;
+        top: 0;
+        transform: rotate(30deg);
+        animation:mymove 3s infinite linear;
+        animation-direction: alternate;
+        -webkit-animation:mymove 3s infinite linear alternate; /* Safari 和 Chrome */
+    }
+    .face{
+        border: 3px solid #76c3f1;
+        border-radius: 90px;
+        width: 76%;
+        height: 56%;
+        margin: 12% auto;
+        box-shadow:0 0 0 3px #a51f20,
+                   0 0 0 6px #6e79bb,
+                   0 0 0 9px #dadc60,
+                   0 0 0 12px #9eee8d;
+
+    }
+
+    .eye{
+        width: 50px;
+        height: 80px;
+        border: solid 1px black;
+        position: absolute;
+        border-radius: 50% / 50%;
+        background: #373737;
+
+    }
+    .eye-left{
+        left: 70px;
+        top: 80px;
+        transform: rotate(50deg);
+    }
+    .eye-right{
+        right: 70px;
+        top: 80px;
+        transform: rotate(-50deg);
+    }
+    .nose {
+        width: 20px;
+        height: 15px;
+        border: solid 1px black;
+        border-radius: 50% / 50%;
+        background: #373737;
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mouth{
+        width: 40px;
+        height: 15px;
+        border: solid 1px black;
+        border-radius: 50% / 50%;
+        background: #373737;
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+    .mouthtap{
+        width: 14px;
+        height: 60px;
+        border-radius: 50% / 50%;
+        background: white;
+        position: absolute;
+        transform:  translateX(-50%) rotate(90deg);
+        top: 41%;
+        left: 50%;
+        z-index: 1;
+    }
+    .tongue{
+        margin-top: 2%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50% / 50%;
+        background:#e7a5a6;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        z-index: 3;
+        transform:  translateX(-50%) rotate(90deg);
+        bottom: -6px;
+    }
+    .eye-circle{
+        background: #373737;
+        width: 30px;
+        height: 30px;
+        border-radius: 50% / 50%;
+        position: absolute;
+        top: 22%;
+        left: 22%;
+        border: #fdfdfd solid 3px;
+    }
+    .eye-center{
+        width: 8px;
+        height: 8px;
+        border-radius: 50% / 50%;
+        background: #f7f7f7;
+        position: absolute;
+    }
+    .eye-center-left{
+        top: 12%;
+        left: 47%;
+    }
+    .eye-center-right{
+        top:12% ;
+        right: 47%;
+    }
+    .hand{
+        width: 90px;
+        height: 50px;
+        border-radius: 50% / 50%;
+        background: #000000;
+        position: absolute;
+        transform: rotate(-45deg);
+
+        z-index: -3;
+    }
+    .hand-left{
+        top: 50%;
+        left:-20%;
+    }
+    .hand-right{
+        top: 40%;
+        right: -20%;
+    }
+
+    .foot{
+        width: 50px;
+        height: 90px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background: #000000;
+        position: absolute;
+        z-index: -6;
+        bottom: -4%;
+    }
+    .foot-left{
+        left: 20%;
+    }
+    .foot-right{
+        right: 20%;
+    }</style>
